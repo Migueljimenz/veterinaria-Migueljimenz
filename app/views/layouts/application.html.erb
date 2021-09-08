@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Model</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <main> 
+        <header>
+            <%= image_tag "logo veterinaria.png" %>
+        </header>
+        <nav>
+            <ul> 
+                <li>.Servicios.</li>
+                <li>.Productos.</li>
+                <li>.Guarderia</li>
+                <li>.Promocion.</li>
+            </ul>
+        </nav>
+        <%= yield %>
+        <footer>
+            <p>Contactenos</p>
+            <P>Linea Gratuita 018000-00001</P>
+            <p>Correo:preguntas@caninosyfelinos.com</p>
+        </footer>
+      </main>
+  </body>
+</html>

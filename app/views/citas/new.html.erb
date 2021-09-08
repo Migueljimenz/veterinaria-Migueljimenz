@@ -1,0 +1,51 @@
+<section id="general"> 
+            <section id="articulos">
+                <article>
+                    <header>
+                        <strong>Cuidados y educacion para su perro</strong>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio fuga, dignissimos minus ratione cupiditate nesciunt quidem cum adipisci commodi sunt eum veritatis reiciendis quibusdam nostrum obcaecati laborum temporibus est! Temporibus.</p>
+                    <%= image_tag "perrito1.png" %>
+                </article>
+                <article>
+                    <header><strong>Salir de viaje con su mascota</strong></header>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci debitis nam ipsum ipsa accusantium velit accusamus reiciendis, asperiores facilis quo dignissimos maxime, optio id recusandae amet distinctio. Beatae, aliquam.</p>
+                    <%= image_tag "perrito2.png" %>
+                </article>
+            </section>
+            <aside>
+                <header>Solicitar cita</header>
+                <form action="http://127.0.0.1:3000/citas" method="POST"> 
+                   <table>
+                    <tr>
+                        <td><label for="mascota">Mascota</label></td>
+                        <td><input type="text" id="mascota" required name="mascota" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">Edad</label></td>
+                        <td><input type="text" id="edad" required name="edad" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="raza">Raza</label></td>
+                        <td><input type="text" id="raza" required name="raza" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fecha">Fecha</label></td>
+                        <td><input type="text" id="fecha" required name="fecha" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="hora">Hora</label></td>
+                        <td><input type="text" id="hora" required name="hora" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label for="amo">Amo</label></td>
+                        <td><input type="text" id="amo" required name="amo" placeholder=""></input></td>
+                    </tr>
+                    <tr>
+                        <td><label></label></td>
+                    <td><input type="submit" value="VALIDAR CITA"></input></td>
+                    </tr>
+                   </table>
+                </form>
+            </aside>
+        </section>

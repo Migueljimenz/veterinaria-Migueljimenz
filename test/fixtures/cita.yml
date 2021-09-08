@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mascota: MyString
+  edad: 1
+  raza: MyString
+  fecha: 2021-09-04
+  hora: 2021-09-04 12:03:44
+  amo: MyString
+
+two:
+  mascota: MyString
+  edad: 1
+  raza: MyString
+  fecha: 2021-09-04
+  hora: 2021-09-04 12:03:44
+  amo: MyString

@@ -1,0 +1,2155 @@
+  [1m[35m (15.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (597.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (214.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCita (20210904170343)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "cita" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mascota" varchar, "edad" integer, "raza" varchar, "fecha" date, "hora" time, "amo" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210904170343"]]
+  [1m[36mTRANSACTION (216.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-04 17:05:29.899334"], ["updated_at", "2021-09-04 17:05:29.899334"]]
+  [1m[36mTRANSACTION (125.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCita (20210904170343)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.9ms)[0m  [1m[35mDROP TABLE "cita"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210904170343"]]
+  [1m[36mTRANSACTION (132.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCita (20210904170343)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "cita" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "mascota" varchar, "edad" integer, "raza" varchar, "fecha" varchar, "hora" varchar, "amo" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210904170343"]]
+  [1m[36mTRANSACTION (67.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-09-04 13:47:18 -0500
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 52.3ms | Allocations: 618)
+Completed 200 OK in 216ms (Views: 106.9ms | ActiveRecord: 0.0ms | Allocations: 4997)
+
+
+Started GET "/index" for ::1 at 2021-09-04 13:47:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/citas" for ::1 at 2021-09-04 13:47:43 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 144)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/HP/desarrollo vet/model/public/packs
+[Webpacker] Hash: e2a8a876c5815bee1e21
+Version: webpack 4.46.0
+Time: 16458ms
+Built at: 04/09/2021 1:48:27 p. m.
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 44590.4ms | Allocations: 17150)
+Completed 200 OK in 44617ms (Views: 44609.2ms | ActiveRecord: 0.0ms | Allocations: 18625)
+
+
+Started GET "/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 13:48:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas" for ::1 at 2021-09-04 13:50:14 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 4188)
+Completed 200 OK in 97ms (Views: 90.1ms | ActiveRecord: 0.0ms | Allocations: 5634)
+
+
+Started GET "/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 13:50:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas.new" for ::1 at 2021-09-04 13:50:25 -0500
+Processing by CitasController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 3633)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 0.0ms | Allocations: 4257)
+
+
+Started GET "/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 13:50:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/cnew" for ::1 at 2021-09-04 13:50:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cnew"):
+  
+Started GET "/new.citas" for ::1 at 2021-09-04 13:50:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new.citas"):
+  
+Started GET "/citas" for ::1 at 2021-09-04 13:58:38 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 160.2ms | Allocations: 4308)
+Completed 200 OK in 185ms (Views: 178.2ms | Allocations: 5634)
+
+
+Started GET "/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 13:58:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas/new" for ::1 at 2021-09-04 13:58:44 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 380.9ms | Allocations: 7770)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 446.6ms | Allocations: 11295)
+Completed 200 OK in 454ms (Views: 448.9ms | Allocations: 11901)
+
+
+Started GET "/citas/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 13:58:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/citas/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas/new" for ::1 at 2021-09-04 14:01:31 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 1497)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 5328)
+Completed 200 OK in 125ms (Views: 115.3ms | Allocations: 6649)
+
+
+Started GET "/citas/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 14:01:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/citas/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas/new" for ::1 at 2021-09-04 14:06:09 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 450.4ms | Allocations: 13195)
+Completed 200 OK in 461ms (Views: 455.8ms | Allocations: 13673)
+
+
+Started GET "/citas/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 14:06:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/citas/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas" for ::1 at 2021-09-04 14:06:24 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.0ms | Allocations: 3779)
+Completed 200 OK in 118ms (Views: 112.8ms | Allocations: 4366)
+
+
+Started GET "/imagenes/logo%20veterinaria.png" for ::1 at 2021-09-04 14:06:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/imagenes/logo%20veterinaria.png"):
+  
+Started GET "/citas" for ::1 at 2021-09-04 14:09:03 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 90.0ms | Allocations: 4865)
+Completed 200 OK in 118ms (Views: 108.1ms | Allocations: 6187)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:09:18 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 5438)
+Completed 200 OK in 128ms (Views: 121.8ms | Allocations: 6074)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:10:30 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 4772)
+Completed 200 OK in 114ms (Views: 102.7ms | Allocations: 6095)
+
+
+Started GET "/citas" for ::1 at 2021-09-04 14:10:37 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.5ms | Allocations: 4354)
+Completed 200 OK in 114ms (Views: 107.6ms | Allocations: 4986)
+
+
+Started GET "/citas" for ::1 at 2021-09-04 14:14:05 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 4859)
+Completed 200 OK in 116ms (Views: 106.2ms | Allocations: 6184)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:14:11 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 5448)
+Completed 200 OK in 105ms (Views: 99.6ms | Allocations: 6084)
+
+
+Started GET "/citas/new?mascota=flor&edad=&raza=&fecha=&hora=&amo=" for ::1 at 2021-09-04 14:14:40 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"", "raza"=>"", "fecha"=>"", "hora"=>"", "amo"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 136.2ms | Allocations: 5255)
+Completed 200 OK in 143ms (Views: 141.5ms | Allocations: 5716)
+
+
+Started GET "/citas/new?mascota=flor&edad=&raza=&fecha=&hora=&amo=" for ::1 at 2021-09-04 14:19:06 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"", "raza"=>"", "fecha"=>"", "hora"=>"", "amo"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1498)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1570)
+Completed 500 Internal Server Error in 32ms (Allocations: 2868)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"citas"}, missing required keys: [:id]
+Did you mean?  cita_url
+               citas_url
+               citas_path
+               new_cita_url):
+    1: 
+    2: <%= link_to  "Nueva cita", cita_path %>
+    3: 
+    4: <section id="general"> 
+    5:             <section id="articulos">
+  
+app/views/citas/new.html.erb:2
+Started GET "/citas/new" for ::1 at 2021-09-04 14:19:39 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 1596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.1ms | Allocations: 6000)
+Completed 200 OK in 154ms (Views: 147.8ms | Allocations: 7379)
+
+
+Started GET "/citas/new?mascota=flor&edad=&raza=&fecha=&hora=&amo=" for ::1 at 2021-09-04 14:19:45 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"", "raza"=>"", "fecha"=>"", "hora"=>"", "amo"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.9ms | Allocations: 5290)
+Completed 200 OK in 90ms (Views: 87.5ms | Allocations: 5798)
+
+
+Started GET "/citas" for ::1 at 2021-09-04 14:20:02 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.5ms | Allocations: 4340)
+Completed 200 OK in 99ms (Views: 93.5ms | Allocations: 4926)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:20:06 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 5288)
+Completed 200 OK in 89ms (Views: 86.0ms | Allocations: 5778)
+
+
+Started GET "/citas/new?mascota=flor&edad=&raza=&fecha=&hora=&amo=" for ::1 at 2021-09-04 14:27:08 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"", "raza"=>"", "fecha"=>"", "hora"=>"", "amo"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.4ms | Allocations: 5905)
+Completed 200 OK in 118ms (Views: 113.2ms | Allocations: 7233)
+
+
+Started GET "/citas" for ::1 at 2021-09-04 14:27:24 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 4354)
+Completed 200 OK in 94ms (Views: 86.8ms | Allocations: 4986)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:27:29 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 5277)
+Completed 200 OK in 85ms (Views: 83.7ms | Allocations: 5741)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:39:30 -0500
+Processing by CitasController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 428.7ms | Allocations: 14094)
+Completed 200 OK in 562ms (Views: 471.1ms | ActiveRecord: 5.7ms | Allocations: 21879)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 14:39:57 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 292.9ms | Allocations: 13961)
+Completed 200 OK in 383ms (Views: 379.9ms | ActiveRecord: 0.0ms | Allocations: 14506)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 14:51:31 -0500
+Processing by CitasController#index as */*
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 234)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 198.8ms | Allocations: 4709)
+Completed 200 OK in 460ms (Views: 215.5ms | ActiveRecord: 10.8ms | Allocations: 10592)
+
+
+Started GET "/citas/new?mascota=flor&edad=2&raza=gatica&fecha=04-09-2021&hora=2%3A58+p.m.&amo=" for ::1 at 2021-09-04 14:58:57 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>""}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.7ms | Allocations: 5903)
+Completed 200 OK in 304ms (Views: 156.0ms | ActiveRecord: 3.9ms | Allocations: 12388)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:00:32 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"4-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+HTTP Origin header (http://localhost:3000) didn't match request.base_url (http://127.0.0.1:3000)
+Completed 422 Unprocessable Entity in 74ms (Allocations: 510)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.1.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.2) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/citas/new?mascota=flor&edad=2&raza=gatica&fecha=04-09-2021&hora=2%3A58+p.m.&amo=" for ::1 at 2021-09-04 15:04:05 -0500
+Processing by CitasController#new as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>""}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1513)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.6ms | Allocations: 5900)
+Completed 200 OK in 395ms (Views: 208.3ms | ActiveRecord: 5.4ms | Allocations: 12912)
+
+
+Started GET "/citas/new" for ::1 at 2021-09-04 15:04:07 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1175)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 287.6ms | Allocations: 5253)
+Completed 200 OK in 297ms (Views: 294.5ms | ActiveRecord: 0.0ms | Allocations: 5774)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:04:28 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 92ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cita
+Did you mean?  action
+               controller
+               edad
+               raza):
+  
+app/controllers/citas_controller.rb:26:in `cita_params'
+app/controllers/citas_controller.rb:15:in `create'
+Started GET "/citas/new" for ::1 at 2021-09-04 15:06:28 -0500
+Processing by CitasController#new as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:8:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.1ms | Allocations: 5510)
+Completed 200 OK in 155ms (Views: 93.2ms | ActiveRecord: 3.3ms | Allocations: 11842)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:06:32 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 619)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cita
+Did you mean?  action
+               controller
+               edad
+               raza):
+  
+app/controllers/citas_controller.rb:26:in `cita_params'
+app/controllers/citas_controller.rb:15:in `create'
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:07:08 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 16ms (Allocations: 1092)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: @cita
+Did you mean?  mascota
+               fecha
+               action
+               controller):
+  
+app/controllers/citas_controller.rb:26:in `cita_params'
+app/controllers/citas_controller.rb:15:in `create'
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:08:00 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 500 Internal Server Error in 10ms (Allocations: 3651)
+
+
+  
+NameError (undefined local variable or method `cita' for #<CitasController:0x00000000015b30>):
+  
+app/controllers/citas_controller.rb:27:in `cita_params'
+app/controllers/citas_controller.rb:16:in `create'
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:08:50 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 7ms (Allocations: 1091)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: Cita
+Did you mean?  edad
+               raza
+               hora
+               fecha):
+  
+app/controllers/citas_controller.rb:27:in `cita_params'
+app/controllers/citas_controller.rb:16:in `create'
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:09:28 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 4ms (Allocations: 1091)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: cita
+Did you mean?  action
+               controller
+               edad
+               raza):
+  
+app/controllers/citas_controller.rb:27:in `cita_params'
+app/controllers/citas_controller.rb:16:in `create'
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:10:07 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+Completed 400 Bad Request in 4ms (Allocations: 1091)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: citas
+Did you mean?  action
+               mascota
+               controller
+               edad):
+  
+app/controllers/citas_controller.rb:27:in `cita_params'
+app/controllers/citas_controller.rb:16:in `create'
+Started GET "/citas/new" for ::1 at 2021-09-04 15:11:41 -0500
+Processing by CitasController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:9:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 116.0ms | Allocations: 5509)
+Completed 200 OK in 171ms (Views: 121.0ms | ActiveRecord: 6.6ms | Allocations: 11822)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:11:45 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor", "edad"=>"2", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"2:58 p.m.", "amo"=>"miguel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mCita Create (97.4ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "flor"], ["edad", 2], ["raza", "gatica"], ["fecha", "04-09-2021"], ["hora", "2:58 p.m."], ["amo", "miguel"], ["created_at", "2021-09-04 20:11:45.927296"], ["updated_at", "2021-09-04 20:11:45.927296"]]
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (100.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+Redirected to http://127.0.0.1:3000/citas/1
+Completed 302 Found in 303ms (ActiveRecord: 197.8ms | Allocations: 3224)
+
+
+Started GET "/citas/1" for 127.0.0.1 at 2021-09-04 15:11:46 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 4339)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 0.0ms | Allocations: 4904)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:12:09 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | Allocations: 4357)
+Completed 200 OK in 97ms (Views: 92.8ms | ActiveRecord: 0.0ms | Allocations: 4974)
+
+
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCita Load (1.8ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-04 15:13:53 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.0ms | Allocations: 5283)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 0.0ms | Allocations: 5751)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:14:05 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"sary", "edad"=>"1", "raza"=>"gat", "fecha"=>"", "hora"=>"", "amo"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mCita Create (4.2ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "sary"], ["edad", 1], ["raza", "gat"], ["fecha", ""], ["hora", ""], ["amo", ""], ["created_at", "2021-09-04 20:14:05.826262"], ["updated_at", "2021-09-04 20:14:05.826262"]]
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (82.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+Redirected to http://127.0.0.1:3000/citas/2
+Completed 302 Found in 207ms (ActiveRecord: 87.0ms | Allocations: 2368)
+
+
+Started GET "/citas/2" for 127.0.0.1 at 2021-09-04 15:14:06 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 38)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.6ms | Allocations: 4233)
+Completed 200 OK in 169ms (Views: 167.4ms | ActiveRecord: 0.0ms | Allocations: 4679)
+
+
+  [1m[36mCita Load (0.8ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+  [1m[36mCita Load (1.3ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (24.1ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (81.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCita Load (0.6ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:15:57 -0500
+  
+SyntaxError (C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:19: syntax error, unexpected ','
+      edad: params[:edad].,
+                          ^
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:21: syntax error, unexpected label, expecting '='
+      fecha: params[:fecha],
+      ^~~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:22: syntax error, unexpected label, expecting '='
+      hora: params[:hora],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:23: syntax error, unexpected label, expecting '='
+      amo: params[:amo]
+      ^~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:24: syntax error, unexpected ')', expecting `end'
+    )
+    ^
+):
+  
+app/controllers/citas_controller.rb:19: syntax error, unexpected ','
+app/controllers/citas_controller.rb:21: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:22: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:23: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:24: syntax error, unexpected ')', expecting `end'
+app/controllers/citas_controller.rb:19: syntax error, unexpected ','
+app/controllers/citas_controller.rb:21: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:22: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:23: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:24: syntax error, unexpected ')', expecting `end'
+app/controllers/citas_controller.rb:19: syntax error, unexpected ','
+app/controllers/citas_controller.rb:21: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:22: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:23: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:24: syntax error, unexpected ')', expecting `end'
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:17:25 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 4539)
+Completed 200 OK in 82ms (Views: 79.0ms | Allocations: 5902)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-04 15:17:38 -0500
+Processing by CitasController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:9:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 5255)
+Completed 200 OK in 99ms (Views: 78.4ms | ActiveRecord: 2.6ms | Allocations: 10738)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:18:08 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"sary", "edad"=>"1", "raza"=>"gatica", "fecha"=>"04-09-2021", "hora"=>"3:17 p.m.", "amo"=>"miguel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:25:in `create'
+  [1m[36mCita Create (6.5ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "sary"], ["edad", 1], ["raza", "gatica"], ["fecha", "04-09-2021"], ["hora", "3:17 p.m."], ["amo", "miguel"], ["created_at", "2021-09-04 20:18:08.110161"], ["updated_at", "2021-09-04 20:18:08.110161"]]
+  ↳ app/controllers/citas_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (117.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:25:in `create'
+Redirected to http://127.0.0.1:3000/citas/3
+Completed 302 Found in 150ms (ActiveRecord: 123.7ms | Allocations: 2574)
+
+
+Started GET "/citas/3" for 127.0.0.1 at 2021-09-04 15:18:08 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 2381)
+
+
+  
+NameError (uninitialized constant CitasController::Citas):
+  
+app/controllers/citas_controller.rb:13:in `show'
+Started GET "/citas/3" for 127.0.0.1 at 2021-09-04 15:18:57 -0500
+  
+SyntaxError (C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:14: syntax error, unexpected ':', expecting `end'
+    mascota: params[:mascota],
+           ^
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+      edad: params[:edad],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+      raza: params[:raza],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+      fecha: params[:fecha],
+      ^~~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+      hora: params[:hora],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+      amo: params[:amo]
+      ^~~~
+):
+  
+app/controllers/citas_controller.rb:14: syntax error, unexpected ':', expecting `end'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:14: syntax error, unexpected ':', expecting `end'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:14: syntax error, unexpected ':', expecting `end'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+Started GET "/citas/3" for 127.0.0.1 at 2021-09-04 15:19:17 -0500
+  
+SyntaxError (C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:14: syntax error, unexpected local variable or method, expecting ')'
+    mascota: params[:mascota],
+    ^~~~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+      edad: params[:edad],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+      raza: params[:raza],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+      fecha: params[:fecha],
+      ^~~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+      hora: params[:hora],
+      ^~~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+      amo: params[:amo])
+      ^~~~
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:19: syntax error, unexpected ')', expecting `end'
+      amo: params[:amo])
+                       ^
+C:/Users/HP/desarrollo vet/model/app/controllers/citas_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/citas_controller.rb:14: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/citas_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/citas_controller.rb:14: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/citas_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/citas_controller.rb:14: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/citas_controller.rb:15: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:16: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:17: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:18: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected label, expecting '='
+app/controllers/citas_controller.rb:19: syntax error, unexpected ')', expecting `end'
+app/controllers/citas_controller.rb:37: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/citas/3" for 127.0.0.1 at 2021-09-04 15:21:02 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 4855)
+Completed 200 OK in 86ms (Views: 82.9ms | Allocations: 6333)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:21:05 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 4564)
+Completed 200 OK in 95ms (Views: 88.9ms | Allocations: 5833)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:32:01 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 4257)
+Completed 200 OK in 78ms (Views: 76.6ms | Allocations: 4745)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 15:32:21 -0500
+Processing by CitasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 4539)
+Completed 200 OK in 141ms (Views: 92.9ms | ActiveRecord: 2.3ms | Allocations: 10853)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-04 15:32:29 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 5449)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.0ms | Allocations: 6130)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:33:09 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"tom", "edad"=>"3", "raza"=>"gato", "fecha"=>"04-09-2021", "hora"=>"3:32 p.m.", "amo"=>"miguel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mCita Create (27.2ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "tom"], ["edad", 3], ["raza", "gato"], ["fecha", "04-09-2021"], ["hora", "3:32 p.m."], ["amo", "miguel"], ["created_at", "2021-09-04 20:33:09.248081"], ["updated_at", "2021-09-04 20:33:09.248081"]]
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (73.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:24:in `create'
+Redirected to http://127.0.0.1:3000/citas/4
+Completed 302 Found in 145ms (ActiveRecord: 101.0ms | Allocations: 2656)
+
+
+Started GET "/citas/4" for 127.0.0.1 at 2021-09-04 15:33:09 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 4260)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms | Allocations: 4706)
+
+
+Started GET "/citas/4" for 127.0.0.1 at 2021-09-04 15:34:59 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+Completed 200 OK in 30ms (Views: 1.0ms | ActiveRecord: 2.7ms | Allocations: 7559)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-04 15:35:06 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 5532)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms | Allocations: 6291)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCita Load (1.0ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+  [1m[36mCita Load (0.6ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (3.3ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (371.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (2.6ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (78.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:38:21 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"tom", "edad"=>"3", "raza"=>"gato", "fecha"=>"04-09-2021", "hora"=>"3:32 p.m.", "amo"=>"miguel"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mCita Create (9.6ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "tom"], ["edad", 3], ["raza", "gato"], ["fecha", "04-09-2021"], ["hora", "3:32 p.m."], ["amo", "miguel"], ["created_at", "2021-09-04 20:38:21.922177"], ["updated_at", "2021-09-04 20:38:21.922177"]]
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (76.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+Redirected to http://127.0.0.1:3000/citas/5
+Completed 302 Found in 142ms (ActiveRecord: 89.3ms | Allocations: 8162)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:38:22 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 4557)
+Completed 200 OK in 70ms (Views: 63.2ms | ActiveRecord: 0.4ms | Allocations: 6203)
+
+
+Started GET "/citas/5.json" for 127.0.0.1 at 2021-09-04 15:38:52 -0500
+Processing by CitasController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1194)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:38:59 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.8ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 4265)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.8ms | Allocations: 5295)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:40:02 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 4913)
+Completed 200 OK in 94ms (Views: 83.6ms | ActiveRecord: 0.4ms | Allocations: 6842)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:40:42 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (1.0ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 239.1ms | Allocations: 4902)
+Completed 200 OK in 271ms (Views: 261.0ms | ActiveRecord: 1.0ms | Allocations: 6927)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:41:27 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.3ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 4867)
+Completed 200 OK in 85ms (Views: 74.2ms | ActiveRecord: 0.3ms | Allocations: 6892)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:41:50 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.3ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 137.0ms | Allocations: 4874)
+Completed 200 OK in 186ms (Views: 156.9ms | ActiveRecord: 0.3ms | Allocations: 6902)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:51:06 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  [1m[36mCita Load (0.6ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 4872)
+Completed 200 OK in 118ms (Views: 74.8ms | ActiveRecord: 1.4ms | Allocations: 7547)
+
+
+Started GET "/citas/5.json" for 127.0.0.1 at 2021-09-04 15:51:09 -0500
+Processing by CitasController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (2.5ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 2.5ms | Allocations: 1167)
+
+
+Started GET "/citas/5" for 127.0.0.1 at 2021-09-04 15:51:12 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 4260)
+Completed 200 OK in 82ms (Views: 73.8ms | ActiveRecord: 0.4ms | Allocations: 5289)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-04 15:51:13 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 5426)
+Completed 200 OK in 81ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 6021)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-04 15:51:20 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"tom", "edad"=>"4", "raza"=>"gato", "fecha"=>"04-09-2021", "hora"=>"3:32 p.m.", "amo"=>"miguel"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mCita Create (4.3ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "tom"], ["edad", 4], ["raza", "gato"], ["fecha", "04-09-2021"], ["hora", "3:32 p.m."], ["amo", "miguel"], ["created_at", "2021-09-04 20:51:20.433991"], ["updated_at", "2021-09-04 20:51:20.433991"]]
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+Redirected to http://127.0.0.1:3000/citas/6
+Completed 302 Found in 99ms (ActiveRecord: 76.3ms | Allocations: 2377)
+
+
+Started GET "/citas/6" for 127.0.0.1 at 2021-09-04 15:51:20 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 4260)
+Completed 200 OK in 71ms (Views: 62.3ms | ActiveRecord: 0.4ms | Allocations: 5291)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 17:30:53 -0500
+Started GET "/citas" for 127.0.0.1 at 2021-09-04 17:31:05 -0500
+Processing by CitasController#index as HTML
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 859.6ms | Allocations: 236)
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6767.5ms | Allocations: 8957)
+Completed 200 OK in 13047ms (Views: 10721.4ms | Allocations: 11188)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 5474.7ms | Allocations: 8854)
+Completed 200 OK in 8210ms (Views: 8201.9ms | Allocations: 10801)
+
+
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCita Load (0.5ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+  [1m[36mCita Load (0.8ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" IN (?, ?)[0m  [["id", 5], ["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (83.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (64.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-09-06 15:22:09 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/miguel/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/miguel/.rvm/gems/ruby-3.0.2/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 27.4ms | Allocations: 595)
+Completed 200 OK in 53ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 4751)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:22:25 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 209.0ms | Allocations: 16695)
+Completed 200 OK in 258ms (Views: 236.6ms | ActiveRecord: 1.2ms | Allocations: 23549)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:22:29 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4536)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 5299)
+
+
+Started GET "/citas/show" for 127.0.0.1 at 2021-09-06 15:24:56 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+Completed 404 Not Found in 17ms (ActiveRecord: 0.4ms | Allocations: 3561)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Cita with 'id'=show):
+  
+app/controllers/citas_controller.rb:13:in `show'
+Started GET "/citas/1/" for 127.0.0.1 at 2021-09-06 15:25:09 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCita Load (0.2ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 34.7ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 4025)
+Completed 200 OK in 67ms (Views: 53.7ms | ActiveRecord: 0.2ms | Allocations: 6148)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:25:25 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3495)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4125)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:26:23 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 10606)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms | Allocations: 11050)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:26:39 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 11087)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms | Allocations: 11530)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:26:48 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 4366)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 4940)
+
+
+Started GET "/citas/1/" for 127.0.0.1 at 2021-09-06 15:29:11 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCita Load (0.2ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4015)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 0.2ms | Allocations: 5983)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:29:44 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4008)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 5391)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:32:34 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4031)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 5366)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:36:00 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 4008)
+Completed 200 OK in 24ms (Views: 21.1ms | Allocations: 5381)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:36:02 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4362)
+Completed 200 OK in 28ms (Views: 25.8ms | Allocations: 4988)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:37:48 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4868)
+Completed 200 OK in 22ms (Views: 20.0ms | Allocations: 6192)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:39:16 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4860)
+Completed 200 OK in 28ms (Views: 25.9ms | Allocations: 6235)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:44:49 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 271)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 4049)
+Completed 200 OK in 20ms (Views: 17.6ms | Allocations: 5426)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:45:09 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 4361)
+Completed 200 OK in 33ms (Views: 29.7ms | Allocations: 4987)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-06 15:45:48 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"flor ", "edad"=>"2", "raza"=>"gata", "fecha"=>"6-09-2021", "hora"=>"15:45 pm", "amo"=>"miguel"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mCita Create (44.0ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "flor "], ["edad", 2], ["raza", "gata"], ["fecha", "6-09-2021"], ["hora", "15:45 pm"], ["amo", "miguel"], ["created_at", "2021-09-06 20:45:48.881888"], ["updated_at", "2021-09-06 20:45:48.881888"]]
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (89.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+Redirected to http://127.0.0.1:3000/citas/7
+Completed 302 Found in 166ms (ActiveRecord: 134.5ms | Allocations: 3723)
+
+
+Started GET "/citas/7" for 127.0.0.1 at 2021-09-06 15:45:49 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCita Load (0.3ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3523)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 0.3ms | Allocations: 4653)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:45:51 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3412)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms | Allocations: 3859)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:47:45 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 4022)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 5347)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:49:05 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4022)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 5405)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:50:01 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4050)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 5433)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:51:47 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 4031)
+Completed 200 OK in 32ms (Views: 29.8ms | Allocations: 5407)
+
+
+Started GET "/citas?mascota=hola" for 127.0.0.1 at 2021-09-06 15:51:53 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3422)
+Completed 200 OK in 19ms (Views: 17.6ms | Allocations: 3920)
+
+
+Started GET "/citas?mascota=hola" for 127.0.0.1 at 2021-09-06 15:55:28 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4026)
+Completed 200 OK in 25ms (Views: 22.8ms | Allocations: 5349)
+
+
+Started GET "/citas?mascota=hola" for 127.0.0.1 at 2021-09-06 15:55:30 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3416)
+Completed 200 OK in 21ms (Views: 19.2ms | Allocations: 3913)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:55:32 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 4365)
+Completed 200 OK in 40ms (Views: 38.3ms | Allocations: 4937)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-06 15:56:00 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"tommy", "edad"=>"ni idea", "raza"=>"gato grande", "fecha"=>"1234", "hora"=>"1234", "amo"=>"aldemar"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mCita Create (0.5ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "tommy"], ["edad", 0], ["raza", "gato grande"], ["fecha", "1234"], ["hora", "1234"], ["amo", "aldemar"], ["created_at", "2021-09-06 20:56:00.793358"], ["updated_at", "2021-09-06 20:56:00.793358"]]
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (88.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:29:in `create'
+Redirected to http://127.0.0.1:3000/citas/8
+Completed 302 Found in 118ms (ActiveRecord: 93.6ms | Allocations: 3138)
+
+
+Started GET "/citas/8" for 127.0.0.1 at 2021-09-06 15:56:00 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3501)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.4ms | Allocations: 4686)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 15:56:02 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 3412)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 3858)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:57:05 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 4852)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 6180)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 15:57:34 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4219)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 4657)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 15:57:36 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3511)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 4091)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 15:57:41 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3412)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 3855)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:09:15 -0500
+Processing by CitasController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 4038)
+Completed 200 OK in 37ms (Views: 31.9ms | Allocations: 5358)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:09:53 -0500
+Processing by CitasController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3693)
+Completed 200 OK in 15ms (Views: 11.9ms | Allocations: 5041)
+
+
+Started GET "/cita" for 127.0.0.1 at 2021-09-06 16:10:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/cita"):
+  
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:11:06 -0500
+Processing by CitasController#index as */*
+Completed 500 Internal Server Error in 15ms (Allocations: 3614)
+
+
+  
+NoMethodError (undefined method `espond_to' for #<CitasController:0x0000000000bbd0>
+Did you mean?  respond_to
+               respond_to?):
+  
+app/controllers/citas_controller.rb:6:in `index'
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:11:27 -0500
+Processing by CitasController#index as */*
+Completed 500 Internal Server Error in 16ms (Allocations: 2944)
+
+
+  
+NoMethodError (undefined method `espond_to' for #<CitasController:0x0000000000bfb8>
+Did you mean?  respond_to
+               respond_to?):
+  
+app/controllers/citas_controller.rb:6:in `index'
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:11:41 -0500
+Processing by CitasController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 3693)
+Completed 200 OK in 19ms (Views: 15.1ms | Allocations: 5213)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:12:28 -0500
+Processing by CitasController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3999)
+Completed 200 OK in 19ms (Views: 15.5ms | Allocations: 6078)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:27:06 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4021)
+Completed 200 OK in 17ms (Views: 14.6ms | Allocations: 5431)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:28:48 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4025)
+Completed 200 OK in 29ms (Views: 26.7ms | Allocations: 5434)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:29:54 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4039)
+Completed 200 OK in 25ms (Views: 20.3ms | Allocations: 5457)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:31:35 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4029)
+Completed 200 OK in 17ms (Views: 14.5ms | Allocations: 5439)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:31:36 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 3412)
+Completed 200 OK in 22ms (Views: 20.8ms | Allocations: 3945)
+
+
+Started GET "/citas?mascota=se+fue+asi&edad=juuu&raza=quien+sabe&fecha=1234&hora=1234&amo=hola" for 127.0.0.1 at 2021-09-06 16:31:37 -0500
+Processing by CitasController#index as HTML
+  Parameters: {"mascota"=>"se fue asi", "edad"=>"juuu", "raza"=>"quien sabe", "fecha"=>"1234", "hora"=>"1234", "amo"=>"hola"}
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3412)
+Completed 200 OK in 16ms (Views: 14.4ms | Allocations: 3882)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 16:31:40 -0500
+Processing by CitasController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:12:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4375)
+Completed 200 OK in 54ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 9418)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-06 16:31:54 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"erbeiwjrbj", "edad"=>"2", "raza"=>"jernewr", "fecha"=>"jfbvijeb", "hora"=>"djbfvieqb", "amo"=>"jbfvieb"}
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mCita Create (0.5ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "erbeiwjrbj"], ["edad", 2], ["raza", "jernewr"], ["fecha", "jfbvijeb"], ["hora", "djbfvieqb"], ["amo", "jbfvieb"], ["created_at", "2021-09-06 21:31:54.815636"], ["updated_at", "2021-09-06 21:31:54.815636"]]
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (65.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+Redirected to http://127.0.0.1:3000/citas/9
+Completed 302 Found in 81ms (ActiveRecord: 68.7ms | Allocations: 2573)
+
+
+Started GET "/citas/9" for 127.0.0.1 at 2021-09-06 16:31:54 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:16:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3502)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 4884)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:31:56 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3412)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 3888)
+
+
+  [1m[36mCita Load (0.5ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:32:34 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3430)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3850)
+
+
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" IN (?, ?, ?)[0m  [["id", 7], ["id", 8], ["id", 9]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (96.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (1.4ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (63.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.7ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (63.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:39:43 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4029)
+Completed 200 OK in 35ms (Views: 32.9ms | Allocations: 5380)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:39:51 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3422)
+Completed 200 OK in 18ms (Views: 16.2ms | Allocations: 3958)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:40:16 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3412)
+Completed 200 OK in 17ms (Views: 14.7ms | Allocations: 3882)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 16:40:17 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3412)
+Completed 200 OK in 22ms (Views: 19.8ms | Allocations: 3883)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:00:39 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 4032)
+Completed 200 OK in 58ms (Views: 55.0ms | Allocations: 5383)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:00:41 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3412)
+Completed 200 OK in 21ms (Views: 19.2ms | Allocations: 3945)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:00:42 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3415)
+Completed 200 OK in 18ms (Views: 16.7ms | Allocations: 3886)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:00:43 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3412)
+Completed 200 OK in 14ms (Views: 12.6ms | Allocations: 3882)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 17:00:52 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 1130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 4366)
+Completed 200 OK in 47ms (Views: 45.0ms | Allocations: 4942)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-06 17:01:05 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"d", "edad"=>"s", "raza"=>"d", "fecha"=>"s", "hora"=>"s", "amo"=>"s"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mCita Create (0.5ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "d"], ["edad", 0], ["raza", "d"], ["fecha", "s"], ["hora", "s"], ["amo", "s"], ["created_at", "2021-09-06 22:01:05.979694"], ["updated_at", "2021-09-06 22:01:05.979694"]]
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (103.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+Redirected to http://127.0.0.1:3000/citas/10
+Completed 302 Found in 122ms (ActiveRecord: 104.6ms | Allocations: 3137)
+
+
+Started GET "/citas/10" for 127.0.0.1 at 2021-09-06 17:01:06 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCita Load (0.6ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:16:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3501)
+Completed 200 OK in 22ms (Views: 11.6ms | ActiveRecord: 0.6ms | Allocations: 4676)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:01:08 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3422)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 3900)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:01:56 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4040)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 5399)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:01:57 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3412)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 3949)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:01:59 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3412)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 3886)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 17:04:27 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 4366)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 4945)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:06:02 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 4042)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 5400)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:06:35 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4038)
+Completed 200 OK in 25ms (Views: 21.0ms | Allocations: 5448)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:07:04 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4035)
+Completed 200 OK in 26ms (Views: 23.0ms | Allocations: 5444)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:07:15 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3412)
+Completed 200 OK in 16ms (Views: 14.5ms | Allocations: 3945)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:07:16 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3412)
+Completed 200 OK in 20ms (Views: 17.7ms | Allocations: 3882)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:07:16 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3422)
+Completed 200 OK in 19ms (Views: 17.2ms | Allocations: 3895)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:08:00 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 4045)
+Completed 200 OK in 28ms (Views: 25.1ms | Allocations: 5397)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:08:01 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3412)
+Completed 200 OK in 14ms (Views: 12.2ms | Allocations: 3945)
+
+
+Started GET "/citas/new" for 127.0.0.1 at 2021-09-06 17:08:03 -0500
+Processing by CitasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/new.html.erb within layouts/application
+  Rendered citas/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4365)
+Completed 200 OK in 27ms (Views: 25.1ms | Allocations: 4942)
+
+
+Started POST "/citas" for 127.0.0.1 at 2021-09-06 17:08:13 -0500
+Processing by CitasController#create as HTML
+  Parameters: {"mascota"=>"f", "edad"=>"f", "raza"=>"f", "fecha"=>"f", "hora"=>"f", "amo"=>"f"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mCita Create (0.5ms)[0m  [1m[32mINSERT INTO "cita" ("mascota", "edad", "raza", "fecha", "hora", "amo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["mascota", "f"], ["edad", 0], ["raza", "f"], ["fecha", "f"], ["hora", "f"], ["amo", "f"], ["created_at", "2021-09-06 22:08:13.463481"], ["updated_at", "2021-09-06 22:08:13.463481"]]
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (106.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/citas_controller.rb:32:in `create'
+Redirected to http://127.0.0.1:3000/citas/11
+Completed 302 Found in 134ms (ActiveRecord: 107.5ms | Allocations: 3133)
+
+
+Started GET "/citas/11" for 127.0.0.1 at 2021-09-06 17:08:13 -0500
+Processing by CitasController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCita Load (0.7ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/citas_controller.rb:16:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering citas/show.html.erb within layouts/application
+  Rendered citas/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3505)
+Completed 200 OK in 19ms (Views: 10.2ms | ActiveRecord: 0.7ms | Allocations: 4680)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:08:15 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3418)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 3895)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:09:26 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4037)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 5398)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:09:59 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4035)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 5452)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:10:00 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 3417)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 3954)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:12:18 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 10985)
+Completed 200 OK in 110ms (Views: 108.8ms | ActiveRecord: 0.0ms | Allocations: 11461)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:13:35 -0500
+Processing by CitasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering citas/index.html.erb within layouts/application
+  Rendered citas/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4093)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 5452)
+
+
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:18:28 -0500
+Processing by CitasController#index as HTML
+Completed 500 Internal Server Error in 5ms (Allocations: 1727)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/citas_controller.rb:9:in `index'
+Started GET "/citas" for 127.0.0.1 at 2021-09-06 17:18:48 -0500
+Processing by CitasController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCita Load (0.7ms)[0m  [1m[34mSELECT "cita".* FROM "cita" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 25ms (Allocations: 9122)
+
+
+  [1m[36mCACHE Cita Load (0.0ms)[0m  [1m[34mSELECT "cita".* FROM "cita" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `save' for #<ActiveRecord::Relation [#<Cita id: 1, mascota: "flor", edad: 2, raza: "gatica", fecha: "04-09-2021", hora: "2:58 p.m.", amo: "miguel", created_at: "2021-09-04 20:11:45.927296000 +0000", updated_at: "2021-09-04 20:11:45.927296000 +0000">, #<Cita id: 10, mascota: "d", edad: 0, raza: "d", fecha: "s", hora: "s", amo: "s", created_at: "2021-09-06 22:01:05.979694000 +0000", updated_at: "2021-09-06 22:01:05.979694000 +0000">, #<Cita id: 11, mascota: "f", edad: 0, raza: "f", fecha: "f", hora: "f", amo: "f", created_at: "2021-09-06 22:08:13.463481000 +0000", updated_at: "2021-09-06 22:08:13.463481000 +0000">]>):
+  
+app/controllers/citas_controller.rb:9:in `index'
+  [1m[36mCita Load (0.2ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+  [1m[36mCita Load (0.4ms)[0m  [1m[34mSELECT "cita".* FROM "cita" WHERE "cita"."id" IN (?, ?)[0m  [["id", 10], ["id", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (95.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCita Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cita" WHERE "cita"."id" = ?[0m  [["id", 11]]
+  [1m[36mTRANSACTION (64.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCita Load (0.3ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCita Load (0.6ms)[0m  [1m[34mSELECT "cita".* FROM "cita"[0m
